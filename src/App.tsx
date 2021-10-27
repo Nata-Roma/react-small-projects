@@ -4,6 +4,7 @@ import './App.css';
 import { CountdownTimer } from './components/countdownTimer/CountdownTimer';
 import { Header } from './components/header/Header';
 import { MarkdownEditor } from './components/markdownEditor/MarkdownEditor';
+import { PaperRockScissors } from './components/paperRoskScissors/PaperRockScissors';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route path='/markdown-editor'>
             <MarkdownEditor />
+          </Route>
+          <Route path='/prs'>
+            <PaperRockScissors />
           </Route>
           <Route exact path='/'>
             <div>
