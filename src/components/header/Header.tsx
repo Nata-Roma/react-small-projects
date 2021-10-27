@@ -19,5 +19,13 @@ export const Header = () => (
     >
       Countdown Timer
     </NavLink>
+    <NavLink
+      exact
+      to='/markdown-editor'
+      className='header-link'
+      activeClassName='header-link-active'
+    >
+      Markdown Editor
+    </NavLink>
   </div>
 );

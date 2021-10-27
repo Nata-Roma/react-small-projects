@@ -3,15 +3,19 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { CountdownTimer } from './components/countdownTimer/CountdownTimer';
 import { Header } from './components/header/Header';
+import { MarkdownEditor } from './components/markdownEditor/MarkdownEditor';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className='App'>
+      <div className='app-container'>
         <Header />
         <Switch>
           <Route path='/countdown-timer'>
             <CountdownTimer />
+          </Route>
+          <Route path='/markdown-editor'>
+            <MarkdownEditor />
           </Route>
           <Route exact path='/'>
             <div>

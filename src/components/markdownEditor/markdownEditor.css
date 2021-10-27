@@ -1,0 +1,21 @@
+.markdown-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.markdown-area {
+  width: 45%;
+  border: 1px solid #77777750;
+  box-shadow: 1px 1px 5px #77777780;
+  height: 100%;
+  padding: 0 15px;
+}
+
+.textarea {
+  padding: 15px;
+  font-size: 16px;
+}
