@@ -24,12 +24,18 @@
 }
 
 .prs-count-win {
+  display: inline-block;
+  width: 50px;
+  text-align: start;
   color: var(--green-400);
   text-shadow: none;
   font-size: 40px;
 }
 
 .prs-count-loss {
+  display: inline-block;
+  width: 50px;
+  text-align: start;
   color: var(--red-400);
   text-shadow: none;
   font-size: 40px;

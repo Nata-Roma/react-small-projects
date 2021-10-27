@@ -20,7 +20,7 @@ export const getCurrentTime = (time: number) => {
   return currentTime;
 };
 
-export const timerInit = 500000;
+export const timerInit = 10000;
 
 export const CountdownTimer = () => {
   const [timer, setTimer] = useState(timerInit);
@@ -28,15 +28,19 @@ export const CountdownTimer = () => {
   const [isStart, setStart] = useState(false);
   const [isResume, setResume] = useState(false);
 
+  const clearStates = () => {
+    setStart(false);
+    setResume(false);
+    setTimer(timerInit);
+    setCurrentTime(getCurrentTime(timerInit));
+  };
+
   const onStartTimer = () => {
     if (!isStart) {
       setStart((prev) => !prev);
       setResume((prev) => !prev);
     } else {
-      setStart(false);
-      setResume(false);
-      setTimer(timerInit);
-      setCurrentTime(getCurrentTime(timerInit));
+      clearStates();
     }
   };
 
@@ -50,8 +54,9 @@ export const CountdownTimer = () => {
     let countDownTimer = 0;
     if (isResume) {
       const start = (time: number) => {
-        if (timer <= 0) {
-          clearTimeout(countDownTimer);
+        if (time <= 0) {
+          window.clearTimeout(countDownTimer);
+          clearStates();
         } else {
           countDownTimer = window.setTimeout(() => {
             setCurrentTime(getCurrentTime(time - 1000));
@@ -63,7 +68,7 @@ export const CountdownTimer = () => {
       start(timer);
     }
     return () => {
-      clearTimeout(countDownTimer);
+      window.clearTimeout(countDownTimer);
     };
   }, [isResume, timer]);
 
