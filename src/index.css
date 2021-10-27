@@ -39,14 +39,17 @@ button {
 }
 
 .body {
+  --white: #fff;
   --green-100: #11ff00;
   --green-100-50: #11ff0080;
   --green-200: #0ed800;
   --green-400: #11b300;
+  --green-700: #0b6800;
   --yellow-100: #fffb00;
+  --yellow-100-50: #fffb0080;
   --yellow-200: #ffcb00;
   --yellow-400: #ff9b00;
   --red-100: #ff0000;
   --red-200: #d10000;
-  --red-200: #a10000;
+  --red-400: #a10000;
 }
