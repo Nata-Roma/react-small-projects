@@ -28,7 +28,8 @@ a {
 
 button,
 input,
-textarea {
+textarea,
+canvas {
   outline: none;
   border: none;
 }
@@ -36,6 +37,11 @@ textarea {
 a,
 button {
   cursor: pointer;
+}
+
+div:focus {
+  border: none;
+  outline: none;
 }
 
 .body {

@@ -4,6 +4,7 @@ import './App.css';
 import { CountdownTimer } from './components/countdownTimer/CountdownTimer';
 import { Header } from './components/header/Header';
 import { MarkdownEditor } from './components/markdownEditor/MarkdownEditor';
+import { MoveOnCanvas } from './components/moveOnCanvas/MoveOnCanvas';
 import { PaperRockScissors } from './components/paperRoskScissors/PaperRockScissors';
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path='/prs'>
             <PaperRockScissors />
+          </Route>
+          <Route path='/move-on-canvas'>
+            <MoveOnCanvas />
           </Route>
           <Route exact path='/'>
             <div>

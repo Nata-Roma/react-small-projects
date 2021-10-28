@@ -7,6 +7,7 @@ export const Header = () => {
   const btnMarkdown = useRef<HTMLAnchorElement>(null);
   const btnCountdown = useRef<HTMLAnchorElement>(null);
   const btnPRS = useRef<HTMLAnchorElement>(null);
+  const btnCanvasMove = useRef<HTMLAnchorElement>(null);
 
   const onMousePosition = (e: any) => {
     const left = (e.nativeEvent.offsetX / e.target.clientWidth) * 100 + '%';
@@ -26,6 +27,10 @@ export const Header = () => {
     if (btnPRS.current && e.target === btnPRS.current) {
       btnPRS.current.style.setProperty('--left', left);
       btnPRS.current.style.setProperty('--top', top);
+    }
+    if (btnCanvasMove.current && e.target === btnCanvasMove.current) {
+      btnCanvasMove.current.style.setProperty('--left', left);
+      btnCanvasMove.current.style.setProperty('--top', top);
     }
   };
 
@@ -70,6 +75,16 @@ export const Header = () => {
         ref={btnPRS}
       >
         P R Scissors
+      </NavLink>
+      <NavLink
+        exact
+        to='/move-on-canvas'
+        className='header-link'
+        activeClassName='header-link-active'
+        onMouseMove={(e) => onMousePosition(e)}
+        ref={btnCanvasMove}
+      >
+        Canvas
       </NavLink>
     </div>
   );
